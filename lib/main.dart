@@ -1,4 +1,5 @@
-import 'package:fitness_ui_app/modules/home/home_screen.dart';
+import 'package:fitness_ui_app/modules/inboarding/onboarding_screen.dart';
+import 'package:fitness_ui_app/shared/constants.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,10 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Fitness Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: kWhiteColor,
       ),
-      home: HomeScreen(),
+      home: OnBoardingScreen(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:fitness_ui_app/shared/constants.dart';
+import 'package:fitness_ui_app/shared/fitness_icons_icons.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,14 +14,13 @@ class HomeScreen extends StatelessWidget {
           width: 200.0,
           child: Container(
             decoration: BoxDecoration(
-              gradient: kSecondaryColor,
+              color: kGrayColor,
             ),
             child: Center(
-              child: Text(
-                'Hello',
-                style: k26TextStyle.copyWith(
-                  color: kWhiteColor,
-                ),
+              child: Icon(
+                FitnessIcons.iconly_bold_unlock,
+                size: 50.0,
+                color: kMain1BrandColor,
               ),
             ),
           ),
