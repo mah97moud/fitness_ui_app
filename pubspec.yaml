@@ -15,6 +15,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   simple_gradient_text: ^1.2.2
+  flutter_svg: ^0.22.0
 
 dev_dependencies:
   flutter_test:
@@ -27,6 +28,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/Iconly/Bold/
+    - assets/Iconly/Light/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -50,6 +53,6 @@ flutter:
           weight: 400
         - asset: assets/Poppins/Poppins-SemiBold.ttf
           weight: 600
-    - family:  FitnessIcons
-      fonts:
-        - asset: assets/Poppins/FitnessIcons.ttf
+#    - family:  FitIcon
+#      fonts:
+#        - asset: assets/Poppins/FitIcon.ttf

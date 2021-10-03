@@ -1,4 +1,4 @@
-import 'package:fitness_ui_app/modules/inboarding/onboarding_screen.dart';
+import 'package:fitness_ui_app/modules/inboarding/welcome_screen.dart';
 import 'package:fitness_ui_app/shared/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: kWhiteColor,
       ),
-      home: OnBoardingScreen(),
+      home: WelcomeScreen(),
     );
   }
 }

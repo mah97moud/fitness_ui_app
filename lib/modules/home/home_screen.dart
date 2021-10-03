@@ -1,5 +1,5 @@
 import 'package:fitness_ui_app/shared/constants.dart';
-import 'package:fitness_ui_app/shared/fitness_icons_icons.dart';
+import 'package:fitness_ui_app/shared/widgets.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,10 +17,15 @@ class HomeScreen extends StatelessWidget {
               color: kGrayColor,
             ),
             child: Center(
-              child: Icon(
-                FitnessIcons.iconly_bold_unlock,
-                size: 50.0,
-                color: kMain1BrandColor,
+              // child: Icon(
+              //   FitIcon.iconly_bold_unlock,
+              //   size: 50.0,
+              //   color: kMain1BrandColor,
+              // ),
+              child: CustomIcon(
+                iconAsset: 'assets/Iconly/Bold/Unlock.svg',
+                size: 100.0,
+                color: Colors.black,
               ),
             ),
           ),

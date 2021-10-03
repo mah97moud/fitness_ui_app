@@ -1,5 +1,7 @@
 import 'package:fitness_ui_app/shared/constants.dart';
+import 'package:fitness_ui_app/shared/size_confige.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class DefaultBtn extends StatelessWidget {
   final String text;
@@ -20,7 +22,9 @@ class DefaultBtn extends StatelessWidget {
       ),
       child: Container(
         width: double.infinity,
-        padding: EdgeInsets.symmetric(vertical: 18.0),
+        padding: EdgeInsets.symmetric(
+          vertical: getProportionateScreenWidth(18.0),
+        ),
         decoration: BoxDecoration(
           gradient: kBrandColor,
           borderRadius: BorderRadius.circular(50.0),
@@ -29,12 +33,46 @@ class DefaultBtn extends StatelessWidget {
           text,
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: 16.0,
+            fontSize: getProportionateScreenWidth(16.0),
             fontWeight: FontWeight.bold,
             color: kWhiteColor,
           ),
         ),
       ),
+    );
+  }
+}
+
+void navigateTo({
+  required BuildContext context,
+  required Widget routeTo,
+}) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => routeTo,
+    ),
+  );
+}
+
+class CustomIcon extends StatelessWidget {
+  const CustomIcon({
+    Key? key,
+    required this.iconAsset,
+    required this.color,
+    required this.size,
+  }) : super(key: key);
+
+  final String iconAsset;
+  final Color color;
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    return SvgPicture.asset(
+      iconAsset,
+      height: size,
+      color: color,
     );
   }
 }

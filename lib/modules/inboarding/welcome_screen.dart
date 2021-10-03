@@ -1,13 +1,17 @@
 import 'package:fitness_ui_app/shared/constants.dart';
+import 'package:fitness_ui_app/shared/size_confige.dart';
 import 'package:fitness_ui_app/shared/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+
+import 'onboarding_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    SizedConf().init(context);
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -49,10 +53,15 @@ class WelcomeScreen extends StatelessWidget {
             Spacer(),
             DefaultBtn(
               text: 'Get Started',
-              onPressed: () {},
+              onPressed: () {
+                navigateTo(
+                  context: context,
+                  routeTo: OnBoardingScreen(),
+                );
+              },
             ),
             SizedBox(
-              height: 50.0,
+              height: getProportionateScreenWidth(50),
             ),
           ],
         ),
