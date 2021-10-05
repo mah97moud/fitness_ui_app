@@ -4,7 +4,7 @@ import 'package:fitness_ui_app/shared/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
-import 'onboarding_screen.dart';
+import 'first_onboarding_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -56,7 +56,7 @@ class WelcomeScreen extends StatelessWidget {
               onPressed: () {
                 navigateTo(
                   context: context,
-                  routeTo: OnBoardingScreen(),
+                  routeTo: FirstBoardingScreen(),
                 );
               },
             ),

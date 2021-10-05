@@ -1,6 +1,7 @@
-import 'package:fitness_ui_app/modules/inboarding/welcome_screen.dart';
 import 'package:fitness_ui_app/shared/constants.dart';
 import 'package:flutter/material.dart';
+
+import 'modules/onboarding/welcome_screen.dart';
 
 void main() {
   runApp(MyApp());
